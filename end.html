@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript Quiz</title>
+    
+    <!-- style.css -->
+    <link rel="stylesheet" href="CSS/style2.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div>
+           <i class="fas fa-award award_icon"></i>
+           <p class="userpoints">Congratulations <br />Your Points : <span class="points"></span></p>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/d56261bbb9.js"></script>
+
+
+    <script>
+        var Question = JSON.parse(localStorage.getItem("Question"));
+        var s = Question[Question.length-1]["Result"] + "/"+(Question.length-1);
+        document.querySelector("span.points").innerHTML = s;
+    </script>
+</body>
+</html>

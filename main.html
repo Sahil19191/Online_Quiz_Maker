@@ -1,0 +1,86 @@
+<!-- 
+    Author : Sahil R. Patel
+    Collage : Institute of Technology, Nirma University
+    Branch  : Computer Science Engineering
+    Grad-Year: 2023 
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Quiz </title>
+    <link rel="stylesheet" type="text/css" href="CSS/style.css">
+
+</head>
+
+<body>
+    <div class="wraper"
+        style="height: 100%;position: absolute;width: 80%;top: 50%;left: 50%;transform: translate(-50%, -50%);">
+
+        <div class="header">
+            <p class="first-p">QUIZ-MAKER</p>
+        </div>
+        <div class="grid-container">
+            <div class="grid-item" id="Heading">
+                <p>Editor</p>
+            </div>
+            <div class="grid-item" id="Heading">
+                <p>Quiz</p>
+            </div>
+            <div class="grid-item1" id="Editor">
+                <form id="Form1">
+                    <label for="Que" class="text1">Write Question here:</label><br />
+                    <textarea id="Question" class="ta1" ></textarea>
+                    <br />
+
+                    <div class="mcq">
+                        <label for="option-a">A.</label>
+                        <input type="text" class="Options" id="option-a" >
+                        <br />
+                        <label for="option-b">B.</label>
+                        <input type="text" class="Options" id="option-b" >
+                        <br />
+                        <label for="option-c">C.</label>
+                        <input type="text" class="Options" id="option-c" >
+                        <br />
+                        <label for="option-d">D.</label>
+                        <input type="text" class="Options" id="option-d" >
+                        <br />
+
+                        <label for="Correct-answer">Correct-option</label>
+                        <select name="answer" id="answer" class="correct" >
+                            <option value="1">A</option>
+                            <option value="2">B</option>
+                            <option value="3">C</option>
+                            <option value="4">D</option>
+                        </select>
+                        <br />
+                        <input type="reset" value="RESET" class="r_button" id="clear">
+
+                    </div>
+                
+                    <div class="button-area">
+                        <input type="button" value="ADD" id="Add" class="Button1" onclick="check()">
+                    </div>
+                    <div class="button-area1">
+                        <input value="Attempt Quiz" type="button" class="Attempt" onclick="attempt()">
+
+                        <input type="button" value="Save Quiz" id="Save" class="Button3" onclick="save()">
+                        
+                        <input type="button" value="Load Quiz" id="Load" class="Button2" onclick="load()">
+                    </div>
+                </form>
+               
+            </div>
+
+            <div class="grid-item2" id="Show-quiz">
+            </div>
+
+        </div>
+    </div>
+    <script src="JS/quiz.js"></script>
+</body>
+
+</html>
